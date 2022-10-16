@@ -1,5 +1,4 @@
-# Portfolio
-This is my portfolio website created using HTML, CSS &amp; JavaScript which is developed to know more about me and showcase my work done till now as a software developer.
+# Project Portfolio
 
 ## Table of Contents
 
@@ -21,17 +20,25 @@ This is my portfolio website created using HTML, CSS &amp; JavaScript which is d
 
 ![Screenshot2](./Images/Screenshots/Screenshot2.jpg)
 
-- Skills Section  
+- Education Section  
 
 ![Screenshot3](./Images/Screenshots/Screenshot3.jpg)
 
-- Projects Section
+- Skills Section  
 
 ![Screenshot4](./Images/Screenshots/Screenshot4.jpg)
 
-- Contact Section  
+- Projects Section
 
 ![Screenshot5](./Images/Screenshots/Screenshot5.jpg)
+
+- GitHub Section
+
+![Screenshot6](./Images/Screenshots/Screenshot6.jpg)
+
+- Contact Section  
+
+![Screenshot7](./Images/Screenshots/Screenshot7.jpg)
 
 ## Tech Stacks Used
 
