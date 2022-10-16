@@ -9,7 +9,7 @@ let homesection = () => {
     </div>
     <div class="home-text">
         <span>Hello, I'm</span>
-        <a href="https://saurabh-pagrut.netlify.app/">
+        <a href="https://saurabh-pagrut-portfolio.netlify.app/">
             <h1 style="color: blue;">Saurabh Pagrut</h1>
         </a>
         <h2>Backend Developer</h2>
