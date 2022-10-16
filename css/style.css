@@ -101,9 +101,11 @@ header.shadow {
   padding: 10px 20px;
   color: var(--text-color);
   font-weight: 500;
+  transition: 1s;
 }
 
 .navbar a:hover {
+  transition: 1s;
   color: var(--hover);
 }
 
@@ -166,9 +168,11 @@ header.shadow {
   margin-bottom: 1rem;
   font-size: 22px;
   color: var(--text-color);
+  transition: 1s;
 }
 
 .social a:hover {
+  transition: 1s;
   color: var(--hover);
 }
 
@@ -216,12 +220,14 @@ header.shadow {
 }
 
 .information .info-box .bx {
+  /* transition: 1s; */
   font-size: 22px;
 }
 
 .information .info-box span {
   font-weight: 400;
   margin-left: 1rem;
+  transition: 1s;
 }
 
 .skills-container {
@@ -233,8 +239,8 @@ header.shadow {
 }
 
 .skills-img img {
-  width: 80%;
-  padding-left: 4rem;
+  width: 90%;
+  padding-left: 2rem;
   object-position: center;
 }
 
@@ -301,6 +307,7 @@ span {
 
 .services-box:hover {
   background-color: #02225a;
+  transition: 1s;
 }
 
 .services-box h3 {
@@ -321,10 +328,12 @@ span {
 
 .services-box:hover .bx {
   color: #22cf91;
+  transition: 1s;
 }
 
 .bx:hover {
-  color: black;
+  transition: 1s;
+  color: blue;
 }
 
 .services-box a {
@@ -345,14 +354,15 @@ span {
 }
 
 .portfolio-img {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgb(93, 75, 255) 0px 3px 8px;
+  transition: 1s;
   overflow: hidden;
   border-radius: 0.5rem;
   padding: 20px;
 }
 
 .portfolio-img:hover {
-  box-shadow: rgb(93, 75, 255) 0px 3px 8px;
+  box-shadow: rgb(1, 255, 242) 0px 3px 8px;
   transition: 1s;
 }
 
@@ -370,6 +380,7 @@ span {
   justify-content: space-around;
   border: none;
   border-radius: 10px;
+  transition: 1s;
 }
 
 .portfolio-img button:hover {
@@ -377,6 +388,7 @@ span {
   border: none;
   background-color: lightgrey;
   cursor: pointer;
+  transition: 1s;
 }
 
 .contact-form {
@@ -422,10 +434,12 @@ form textarea {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-left: 35%;
+  transition: 1s;
 }
 
 .contact-button:hover {
   background: var(--hover);
+  transition: 1s;
 }
 
 .footer {
@@ -441,7 +455,7 @@ form textarea {
 }
 
 .footer-social a i {
-  color: rgb(10, 26, 208);
+  color: rgb(37, 131, 18);
   font-size: 25px;
   margin-left: 10px;
   text-align: center;
@@ -549,6 +563,13 @@ form textarea {
   .about-img {
     display: flex;
     justify-content: center;
+    padding: 25px;
+    border: 1px solid green;
+    /* align-items: flex-start; */
+  }
+
+  .about-img img {
+    border: 1px solid blue;
   }
 
   .skills-container {
@@ -560,7 +581,7 @@ form textarea {
   }
 
   .skills-img {
-    padding-top: 2rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
   }
@@ -656,6 +677,7 @@ a {
 
 .headerachor:hover {
   background-color: #f1f1f1;
+  transition: 1s;
 }
 
 
@@ -681,9 +703,11 @@ a {
 
 .fab {
   color: #2ec866;
+  transition: 1s;
 }
 
 .fab:hover {
+  transition: 1s;
   color: black;
 }
 
@@ -693,6 +717,7 @@ a {
 }
 
 .iconify:hover {
+  transition: 1s;
   color: black;
 }
 

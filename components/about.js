@@ -8,7 +8,7 @@ let aboutsection = () => {
     <!-- About Content -->
     <div class="about-container">
         <div class="about-img">
-            <img src="./Images/OIP.jpg" alt="">
+            <img src="./Images/pic3.png" alt="">
         </div>
         <div class="about-text">
             <p>I am very passionate about coding and strongly interested in enhancing the product experience.

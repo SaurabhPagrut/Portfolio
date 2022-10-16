@@ -72,7 +72,7 @@ let skillssection = () => {
             </div>
         </div>
         <div class="skills-img">
-            <img src="./Images/123.png" alt="">
+            <img src="./Images/pic4.png" alt="">
         </div>
     </div>
     `;
