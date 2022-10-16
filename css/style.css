@@ -564,12 +564,6 @@ form textarea {
     display: flex;
     justify-content: center;
     padding: 25px;
-    border: 1px solid green;
-    /* align-items: flex-start; */
-  }
-
-  .about-img img {
-    border: 1px solid blue;
   }
 
   .skills-container {

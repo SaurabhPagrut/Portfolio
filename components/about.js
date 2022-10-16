@@ -31,7 +31,7 @@ let aboutsection = () => {
                     <span>getsaurabhpagrut@gmail.com</span>
                 </div>
             </div>
-            <a download href="./Images/Files/Saurabh_Pagrut_Resume.pdf" class="btn">Download Resume</a>
+            <a download href="https://github.com/SaurabhPagrut/Saurabh_Pagrut_Resume/raw/main/Saurabh_Pagrut_Resume.pdf" class="btn">Download Resume</a>
         </div>
     </div>
     `
