@@ -66,7 +66,7 @@ let educationsection = () => {
                         <div class="timeline-box">
                             <div class="box-title">
                                 <i class="fas fa-school" aria-hidden="true"></i> Shri R. L. T. College of Science
-                                <p class="degree">Senior Secondary Education</p>
+                                <p class="degree">Higher Secondary Education</p>
                             </div>
                             <div class="box-content">
                                 <div class="box-item"> I have studied science stream subjects like Physics,
