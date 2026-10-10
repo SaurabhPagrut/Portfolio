@@ -1,0 +1,4 @@
+# Netlify settings for saurabhpagrut.in. No build step: the site is plain HTML, CSS and JS in public/.
+# Redirects and headers live in public/_redirects and public/_headers so they also apply to drag-and-drop deploys.
+[build]
+  publish = "public"
