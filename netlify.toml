@@ -1,0 +1,23 @@
+# Netlify settings for saurabhpagrut.in. No build step: the site is plain HTML, CSS and JS in public/.
+[build]
+  publish = "public"
+
+# Send www to the bare domain
+[[redirects]]
+  from = "https://www.saurabhpagrut.in/*"
+  to = "https://saurabhpagrut.in/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

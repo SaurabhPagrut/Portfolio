@@ -1,56 +1,49 @@
-# Project Portfolio
+# Saurabh Pagrut · Portfolio
 
-## Table of Contents
+Personal site for **[saurabhpagrut.in](https://saurabhpagrut.in)**. The design idea is "Saurabh, as an API": each section is an endpoint, and the hero shows the profile as the JSON response it resolves to.
 
-- [Overview](#overview)
-- [Tech Stacks Used](#tech-stacks-used)
-- [Contact](#contact)
+Plain HTML, CSS and JavaScript with no build step and no dependencies, hosted on Netlify.
 
-## Overview
+```
+public/
+  index.html          all page content (hero, experience, skills, archive, education, contact)
+  assets/styles.css   design tokens and component styles (light + dark)
+  assets/app.js       theme switch, background canvas, card hover, JSON toggles, skill filters, contact form
+  assets/portrait-*   profile photo (480 and 960 px)
+  404.html            not-found page
+  thanks/index.html   shown after sending a message with JavaScript turned off
+netlify.toml          publish folder, www redirect, security and cache headers
+```
 
-### Live Demo : [Go Live](https://saurabh-pagrut-portfolio.netlify.app/)  
+## Run it locally
 
-### Screenshots :  
+Any static server works, for example:
 
-- Landing Section
+```bash
+npx serve public     # or: python3 -m http.server -d public 3000
+```
 
-![Screenshot1](./Images/Screenshots/Screenshot1.jpg)
+The contact form only sends on Netlify; locally the request has nowhere to go.
 
-- About Section  
+## Editing content
 
-![Screenshot2](./Images/Screenshots/Screenshot2.jpg)
+Text lives in `public/index.html`. Each section is a `<section class="endpoint" id="...">` block. The **JSON** view of each section is a hand-written copy of the same data inside that section's `<pre>` block, so update both when you change something.
 
-- Education Section  
+## Contact form
 
-![Screenshot3](./Images/Screenshots/Screenshot3.jpg)
+The form uses **Netlify Forms** (no server code and no secrets in the repo). Spam is filtered by Netlify plus a hidden honeypot field.
 
-- Skills Section  
+One-time setup in Netlify:
+1. **Forms → Enable form detection**, then redeploy once.
+2. **Site configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification → Email notification**, once for `getsaurabhpagrut@gmail.com` and once for `hello@saurabhpagrut.in`, form `contact`.
 
-![Screenshot4](./Images/Screenshots/Screenshot4.jpg)
+## Domain
 
-- Projects Section
+saurabhpagrut.in is registered at Hostinger and points at Netlify:
 
-![Screenshot5](./Images/Screenshots/Screenshot5.jpg)
+| Type  | Name | Value                                  |
+|-------|------|----------------------------------------|
+| A     | @    | 75.2.60.5                              |
+| CNAME | www  | saurabh-pagrut-portfolio.netlify.app   |
 
-- GitHub Section
-
-![Screenshot6](./Images/Screenshots/Screenshot6.jpg)
-
-- Contact Section  
-
-![Screenshot7](./Images/Screenshots/Screenshot7.jpg)
-
-## Tech Stacks Used
-
-- **HTML**
-- **CSS**
-- **JavaScript**
-
-## Contact
-
-**If you have any query related to this project reach out to me through :**
-
-- [LinkedIn](https://www.linkedin.com/in/SaurabhPagrut)
-- [Gmail](mailto:getsaurabhpagrut@gmail.com)
-
-# ***Thank You Very Much For Your Precious Time!❤***
+In Netlify, `saurabhpagrut.in` is the primary domain and HTTPS is provisioned automatically.
