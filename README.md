@@ -12,7 +12,7 @@ public/
   assets/portrait-*   profile photo (480 and 960 px)
   404.html            not-found page
   thanks/index.html   shown after sending a message with JavaScript turned off
-public/_redirects     www → bare domain
+public/_redirects     www and *.netlify.app → saurabhpagrut.in
 public/_headers       security and cache headers
 netlify.toml          tells Netlify to publish public/
 ```
@@ -46,6 +46,6 @@ saurabhpagrut.in is registered at Hostinger and points at Netlify:
 | Type  | Name | Value                                  |
 |-------|------|----------------------------------------|
 | A     | @    | 75.2.60.5                              |
-| CNAME | www  | saurabhpagrut.netlify.app   |
+| CNAME | www  | saurabhpagrutportfolio.netlify.app   |
 
 In Netlify, `saurabhpagrut.in` is the primary domain and HTTPS is provisioned automatically.
