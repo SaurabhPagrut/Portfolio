@@ -46,6 +46,6 @@ saurabhpagrut.in is registered at Hostinger and points at Netlify:
 | Type  | Name | Value                                  |
 |-------|------|----------------------------------------|
 | A     | @    | 75.2.60.5                              |
-| CNAME | www  | saurabhpagrut.netlify.app   |
+| CNAME | www  | saurabhpagrutportfolio.netlify.app   |
 
 In Netlify, `saurabhpagrut.in` is the primary domain and HTTPS is provisioned automatically.
