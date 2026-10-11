@@ -1,2 +1,4 @@
-# www to the bare domain
-https://www.saurabhpagrut.in/*  https://saurabhpagrut.in/:splat  301!
+# Send every other hostname to the primary domain
+https://www.saurabhpagrut.in/*                 https://saurabhpagrut.in/:splat  301!
+https://saurabhpagrutportfolio.netlify.app/*   https://saurabhpagrut.in/:splat  301!
+https://saurabhpagrut.netlify.app/*            https://saurabhpagrut.in/:splat  301!

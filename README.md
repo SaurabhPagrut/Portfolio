@@ -12,7 +12,7 @@ public/
   assets/portrait-*   profile photo (480 and 960 px)
   404.html            not-found page
   thanks/index.html   shown after sending a message with JavaScript turned off
-public/_redirects     www → bare domain
+public/_redirects     www and *.netlify.app → saurabhpagrut.in
 public/_headers       security and cache headers
 netlify.toml          tells Netlify to publish public/
 ```
