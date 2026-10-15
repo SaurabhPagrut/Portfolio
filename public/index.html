@@ -19,11 +19,22 @@
     // Apply a saved theme before first paint so there's no flash.
     try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <script src="/assets/app.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Saurabh Pagrut",
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": { "@type": "Organization", "name": "Pine Labs" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+      "url": "https://saurabhpagrut.in/",
+      "image": "https://saurabhpagrut.in/assets/portrait-960.webp",
+      "sameAs": ["https://github.com/SaurabhPagrut", "https://www.linkedin.com/in/saurabhpagrut/"]
+    }
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -291,7 +302,7 @@
       
           <li class="card skill-tile is-primary" data-card data-group="languages" style="--i:0">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/go/go-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/go-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Go</span>
       </span>
             <span class="skill-text">
@@ -303,7 +314,7 @@
         
           <li class="card skill-tile " data-card data-group="languages" style="--i:1">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/java/java-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/java-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Ja</span>
       </span>
             <span class="skill-text">
@@ -315,7 +326,7 @@
         
           <li class="card skill-tile " data-card data-group="languages" style="--i:2">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/javascript/javascript-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/javascript-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Ja</span>
       </span>
             <span class="skill-text">
@@ -345,7 +356,7 @@
         
           <li class="card skill-tile " data-card data-group="backend" style="--i:5">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/spring/spring-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/spring-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">SB</span>
       </span>
             <span class="skill-text">
@@ -357,7 +368,7 @@
         
           <li class="card skill-tile is-primary" data-card data-group="frontend" style="--i:6">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/vuejs/vuejs-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/vuejs-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">VJ</span>
       </span>
             <span class="skill-text">
@@ -387,7 +398,7 @@
         
           <li class="card skill-tile " data-card data-group="frontend" style="--i:9">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/vitejs/vitejs-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/vitejs-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Vi</span>
       </span>
             <span class="skill-text">
@@ -399,7 +410,7 @@
         
           <li class="card skill-tile " data-card data-group="databases" style="--i:10">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/mysql/mysql-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/mysql-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">My</span>
       </span>
             <span class="skill-text">
@@ -411,7 +422,7 @@
         
           <li class="card skill-tile " data-card data-group="databases" style="--i:11">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/mongodb/mongodb-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/mongodb-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Mo</span>
       </span>
             <span class="skill-text">
@@ -423,7 +434,7 @@
         
           <li class="card skill-tile " data-card data-group="databases" style="--i:12">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/redis/redis-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/redis-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Re</span>
       </span>
             <span class="skill-text">
@@ -435,7 +446,7 @@
         
           <li class="card skill-tile is-primary" data-card data-group="cloud-and-devops" style="--i:13">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/amazonwebservices-original-wordmark.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">AE</span>
       </span>
             <span class="skill-text">
@@ -447,7 +458,7 @@
         
           <li class="card skill-tile is-primary" data-card data-group="cloud-and-devops" style="--i:14">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/amazonwebservices-original-wordmark.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">AS</span>
       </span>
             <span class="skill-text">
@@ -459,7 +470,7 @@
         
           <li class="card skill-tile " data-card data-group="cloud-and-devops" style="--i:15">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/docker/docker-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/docker-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Do</span>
       </span>
             <span class="skill-text">
@@ -480,7 +491,7 @@
         
           <li class="card skill-tile " data-card data-group="cloud-and-devops" style="--i:17">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/bamboo/bamboo-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/bamboo-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Ba</span>
       </span>
             <span class="skill-text">
@@ -501,7 +512,7 @@
         
           <li class="card skill-tile " data-card data-group="tools-and-practices" style="--i:19">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/git/git-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/git-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Gi</span>
       </span>
             <span class="skill-text">
@@ -513,7 +524,7 @@
         
           <li class="card skill-tile " data-card data-group="tools-and-practices" style="--i:20">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/bitbucket/bitbucket-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/bitbucket-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">Bi</span>
       </span>
             <span class="skill-text">
@@ -525,7 +536,7 @@
         
           <li class="card skill-tile " data-card data-group="tools-and-practices" style="--i:21">
             <span class="skill-icon" data-logo-wrap>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@7330accdbc47/icons/jira/jira-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
+        <img src="/assets/icons/jira-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-logo />
         <span class="skill-mono" aria-hidden="true">JI</span>
       </span>
             <span class="skill-text">
