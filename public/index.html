@@ -38,7 +38,7 @@
         </a>
 
         <nav class="site-nav" aria-label="Sections">
-          <ul class="nav-list" id="nav-list" data-nav-list><li><a href="#experience" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>experience</a></li><li><a href="#skills" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>skills</a></li><li><a href="#archive" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>archive</a></li><li><a href="#education" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>education</a></li><li><a href="#contact" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>contact</a></li></ul>
+          <ul class="nav-list" id="nav-list" data-nav-list><li><a href="#experience" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>experience</a></li><li><a href="#skills" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>skills</a></li><li><a href="#projects" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>projects</a></li><li><a href="#archive" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>archive</a></li><li><a href="#education" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>education</a></li><li><a href="#contact" class="nav-link"><span class="nav-slash" aria-hidden="true">/</span>contact</a></li></ul>
         </nav>
 
         <div class="header-actions">
@@ -575,6 +575,77 @@
       </div>
     </section>
   
+    <section class="endpoint" id="projects" aria-labelledby="projects-title" data-views>
+      <div class="container">
+        <header class="endpoint-head">
+          <p class="endpoint-path"><span class="method">GET</span> <span>/v1/engineers/saurabhpagrut/<strong>projects</strong></span></p>
+          <div class="endpoint-head-row">
+            <h2 class="endpoint-title" id="projects-title">Projects</h2>
+            <div class="view-toggle" role="group" aria-label="View Projects as">
+        <button type="button" aria-pressed="true" data-view="human" aria-controls="projects-human">Human</button>
+        <button type="button" aria-pressed="false" data-view="json" aria-controls="projects-json">JSON</button>
+      </div>
+          </div>
+        </header>
+        <div class="endpoint-body">
+          <div class="view-panel" id="projects-human" data-panel="human">
+    <p class="section-intro">
+      Recent work. Both tools run entirely in the browser, so nothing you put in them is uploaded.
+    </p>
+    <div class="archive-grid">
+  <article class="card project" data-card>
+    <header class="project-head">
+      <span class="method">WEB</span>
+      <span class="project-year">2026</span>
+    </header>
+
+    <h3 class="project-name">Bracely</h3>
+    <p class="project-desc">Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data and JWT decoding. Nothing is uploaded, and it also ships as Chrome and Firefox extensions.</p>
+
+    <footer class="project-foot">
+      <ul class="chips" aria-label="Technologies">
+        <li class="chip">JavaScript</li><li class="chip">CodeMirror</li><li class="chip">Web Workers</li><li class="chip">Python</li><li class="chip">jsdom</li>
+      </ul>
+      <div class="project-links">
+        <a class="project-link" href="https://bracely.saurabhpagrut.in" target="_blank" rel="noopener">
+          <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg> Live
+        </a>
+      </div>
+    </footer>
+  </article>
+  <article class="card project" data-card>
+    <header class="project-head">
+      <span class="method">WEB</span>
+      <span class="project-year">2026</span>
+    </header>
+
+    <h3 class="project-name">AbogadaFlow</h3>
+    <p class="project-desc">Privacy-first eFiling tool for Indian litigation advocates. It compiles petitions, applications, lists of documents and exhibits into one court-ready PDF bundle in the browser, with an auto-generated index in English and Devanagari, running page numbers, PDF bookmarks, court presets and an eFiling 3.0 filename check. Case files never leave the browser.</p>
+
+    <footer class="project-foot">
+      <ul class="chips" aria-label="Technologies">
+        <li class="chip">React</li><li class="chip">TypeScript</li><li class="chip">Vite</li><li class="chip">Tailwind CSS</li><li class="chip">pdf-lib</li>
+      </ul>
+      <div class="project-links">
+        <a class="project-link" href="https://abogadaflow.saurabhpagrut.in" target="_blank" rel="noopener">
+          <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg> Live
+        </a>
+      </div>
+    </footer>
+  </article>
+</div>
+  </div>
+          <div class="view-panel json-view" id="projects-json" data-panel="json" hidden>
+        <div class="response-bar">
+          <span class="status"><span class="status-dot" aria-hidden="true"></span><span class="status-code">200 OK</span></span>
+          <span class="response-type">GET /v1/engineers/saurabhpagrut/projects</span>
+        </div>
+        <pre tabindex="0"><code class="json "><span class="line" style="--i:0"><span class="j-p">{</span></span><span class="line" style="--i:1">  <span class="j-key">"projects"</span><span class="j-p">: </span><span class="j-p">[</span></span><span class="line" style="--i:2">    <span class="j-p">{</span></span><span class="line" style="--i:3">      <span class="j-key">"name"</span><span class="j-p">: </span><span class="j-str">&quot;Bracely&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:4">      <span class="j-key">"year"</span><span class="j-p">: </span><span class="j-num">2026</span><span class="j-p">,</span></span><span class="line" style="--i:5">      <span class="j-key">"kind"</span><span class="j-p">: </span><span class="j-str">&quot;Web app&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:6">      <span class="j-key">"description"</span><span class="j-p">: </span><span class="j-str">&quot;Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data and JWT decoding. Nothing is uploaded, and it also ships as Chrome and Firefox extensions.&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:7">      <span class="j-key">"stack"</span><span class="j-p">: </span><span class="j-p">[</span><span class="j-str">&quot;JavaScript&quot;</span><span class="j-p">, </span><span class="j-str">&quot;CodeMirror&quot;</span><span class="j-p">, </span><span class="j-str">&quot;Web Workers&quot;</span><span class="j-p">, </span><span class="j-str">&quot;Python&quot;</span><span class="j-p">, </span><span class="j-str">&quot;jsdom&quot;</span><span class="j-p">]</span><span class="j-p">,</span></span><span class="line" style="--i:8">      <span class="j-key">"links"</span><span class="j-p">: </span><span class="j-p">{</span></span><span class="line" style="--i:9">        <span class="j-key">"demo"</span><span class="j-p">: </span><span class="j-str">&quot;https://bracely.saurabhpagrut.in&quot;</span></span><span class="line" style="--i:10">      <span class="j-p">}</span></span><span class="line" style="--i:11">    <span class="j-p">}</span><span class="j-p">,</span></span><span class="line" style="--i:12">    <span class="j-p">{</span></span><span class="line" style="--i:13">      <span class="j-key">"name"</span><span class="j-p">: </span><span class="j-str">&quot;AbogadaFlow&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:14">      <span class="j-key">"year"</span><span class="j-p">: </span><span class="j-num">2026</span><span class="j-p">,</span></span><span class="line" style="--i:15">      <span class="j-key">"kind"</span><span class="j-p">: </span><span class="j-str">&quot;Web app&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:16">      <span class="j-key">"description"</span><span class="j-p">: </span><span class="j-str">&quot;Privacy-first eFiling tool for Indian litigation advocates. It compiles petitions, applications, lists of documents and exhibits into one court-ready PDF bundle in the browser, with an auto-generated index in English and Devanagari, running page numbers, PDF bookmarks, court presets and an eFiling 3.0 filename check. Case files never leave the browser.&quot;</span><span class="j-p">,</span></span><span class="line" style="--i:17">      <span class="j-key">"stack"</span><span class="j-p">: </span><span class="j-p">[</span><span class="j-str">&quot;React&quot;</span><span class="j-p">, </span><span class="j-str">&quot;TypeScript&quot;</span><span class="j-p">, </span><span class="j-str">&quot;Vite&quot;</span><span class="j-p">, </span><span class="j-str">&quot;Tailwind CSS&quot;</span><span class="j-p">, </span><span class="j-str">&quot;pdf-lib&quot;</span><span class="j-p">]</span><span class="j-p">,</span></span><span class="line" style="--i:18">      <span class="j-key">"links"</span><span class="j-p">: </span><span class="j-p">{</span></span><span class="line" style="--i:19">        <span class="j-key">"demo"</span><span class="j-p">: </span><span class="j-str">&quot;https://abogadaflow.saurabhpagrut.in&quot;</span></span><span class="line" style="--i:20">      <span class="j-p">}</span></span><span class="line" style="--i:21">    <span class="j-p">}</span></span><span class="line" style="--i:22">  <span class="j-p">]</span></span><span class="line" style="--i:23"><span class="j-p">}</span></span></code></pre>
+      </div>
+        </div>
+      </div>
+    </section>
+
     <section class="endpoint" id="archive" aria-labelledby="archive-title" data-views>
       <div class="container">
         <header class="endpoint-head">
