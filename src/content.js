@@ -206,7 +206,11 @@ export const projects = {
       description:
         'Chrome extension that finds where an out-of-stock product can be delivered. It checks your pincode first, then nearby pincodes, the rest of your state and the rest of India, and stops at the first place the product is available, using India Post data for about 19,500 pincodes. Works with Flipkart and Croma, with experimental support for Amazon, Myntra and Blinkit.',
       stack: ['JavaScript', 'Chrome Extensions (MV3)', 'Python'],
-      links: {},
+      links: {
+        code: 'https://github.com/SaurabhPagrut/PinScout',
+        demo: 'https://chromewebstore.google.com/detail/pinscout-pincode-delivery/oicfbaoamapgdhailjaaokgkdolalbco',
+        demoLabel: 'Chrome Web Store',
+      },
     },
     {
       name: 'Bracely',
@@ -216,7 +220,7 @@ export const projects = {
       description:
         'Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data and JWT decoding. Nothing is uploaded, and it also ships as Chrome and Firefox extensions.',
       stack: ['JavaScript', 'CodeMirror', 'Web Workers', 'Python', 'jsdom'],
-      links: { demo: 'https://bracely.saurabhpagrut.in' },
+      links: { code: 'https://github.com/SaurabhPagrut/Bracely', demo: 'https://bracely.saurabhpagrut.in' },
     },
     {
       name: 'AbogadaFlow',
@@ -226,7 +230,7 @@ export const projects = {
       description:
         'Privacy-first eFiling tool for Indian litigation advocates. It compiles petitions, applications, lists of documents and exhibits into one court-ready PDF bundle in the browser, with an auto-generated index in English and Devanagari, running page numbers, PDF bookmarks, court presets and an eFiling 3.0 filename check. Case files never leave the browser.',
       stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'pdf-lib'],
-      links: { demo: 'https://abogadaflow.saurabhpagrut.in' },
+      links: { code: 'https://github.com/SaurabhPagrut/AbogadaFlow', demo: 'https://abogadaflow.saurabhpagrut.in' },
     },
   ],
 };
