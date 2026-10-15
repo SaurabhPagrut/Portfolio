@@ -1,0 +1,12 @@
+{
+  "name": "saurabhpagrut-portfolio",
+  "private": true,
+  "type": "module",
+  "description": "Personal site for saurabhpagrut.in. No dependencies.",
+  "scripts": {
+    "build": "node build.js",
+    "check": "node build.js --check",
+    "start": "node build.js && npx serve public"
+  },
+  "engines": { "node": ">=18" }
+}
