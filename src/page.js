@@ -303,7 +303,7 @@ function project(p) {
                 ${p.role ? `<p class="project-role"><span>My part</span> ${esc(p.role)}</p>` : ''}${modules}
                 <footer class="project-foot">
                   ${chips(p.stack)}
-                  <div class="project-links">${links.join('')}</div>
+                  ${links.length ? `<div class="project-links">${links.join('')}</div>` : ''}
                 </footer>
               </article>`;
 }

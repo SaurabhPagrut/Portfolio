@@ -196,8 +196,18 @@ export const skills = [
 // modules + mine: optional list of modules, with the ones you built marked.
 
 export const projects = {
-  intro: 'Recent work. Both tools run entirely in the browser, so nothing you put in them is uploaded.',
+  intro: 'Recent work. All three run in your own browser rather than on a server.',
   items: [
+    {
+      name: 'PinScout',
+      year: 2026,
+      kind: 'Chrome extension',
+      tag: 'EXT',
+      description:
+        'Chrome extension that finds where an out-of-stock product can be delivered. It checks your pincode first, then nearby pincodes, the rest of your state and the rest of India, and stops at the first place the product is available, using India Post data for about 19,500 pincodes. Works with Flipkart and Croma, with experimental support for Amazon, Myntra and Blinkit.',
+      stack: ['JavaScript', 'Chrome Extensions (MV3)', 'Python'],
+      links: {},
+    },
     {
       name: 'Bracely',
       year: 2026,
