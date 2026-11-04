@@ -412,8 +412,7 @@ function contact() {
                   <span class="method method-post">POST</span>
                   <span class="request-path">${API}/messages</span>
                 </div>
-                <form class="contact-form" name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company" data-contact-form novalidate>
-                  <input type="hidden" name="form-name" value="contact" />
+                <form class="contact-form" name="contact" method="POST" action="/api/contact" data-contact-form novalidate>
                   <p class="honeypot" aria-hidden="true">
                     <label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label>
                   </p>

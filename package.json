@@ -6,7 +6,9 @@
   "scripts": {
     "build": "node build.js",
     "check": "node build.js --check",
-    "start": "node build.js && npx serve public"
+    "start": "node build.js && npx serve public",
+    "dev": "node build.js && npx wrangler pages dev",
+    "deploy": "node build.js && npx wrangler pages deploy"
   },
   "engines": { "node": ">=18" }
 }

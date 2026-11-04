@@ -1,6 +1,0 @@
-# Netlify settings for saurabhpagrut.in. The build turns src/content.js into public/index.html
-# (plain Node, no dependencies to install), then Netlify publishes public/.
-# Redirects and headers live in public/_redirects and public/_headers so they also apply to drag-and-drop deploys.
-[build]
-  command = "node build.js"
-  publish = "public"

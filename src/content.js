@@ -1,5 +1,5 @@
 // Everything the site says lives in this file. Edit it, then run `npm run build`
-// (Netlify also runs the build on every deploy). Both the normal view and the
+// (Cloudflare Pages also runs the build on every deploy). Both the normal view and the
 // JSON view of each section are generated from the same data below.
 //
 // Dates are "YYYY" or "YYYY-MM". An `end` of null means "Present".
