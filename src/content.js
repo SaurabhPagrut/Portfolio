@@ -275,7 +275,7 @@ export const archive = {
       tag: 'WEB',
       description: 'Clone of the Expedia travel booking site.',
       stack: ['HTML', 'CSS', 'JavaScript'],
-      links: { code: 'https://github.com/SaurabhPagrut/Expedia_clone', demo: 'https://warm-gecko-dde4da.netlify.app/index.html' },
+      links: { code: 'https://github.com/SaurabhPagrut/Expedia_clone' },
     },
     {
       name: 'YouTube clone',
