@@ -526,7 +526,7 @@
   });
 })();
 
-// Contact section: copy buttons and the message form (handled by Netlify Forms).
+// Contact section: copy buttons and the message form (sent by the Pages Function in functions/api/contact.js).
 
 (() => {
   /* ---- Copy buttons ---- */
@@ -633,15 +633,19 @@
     submit.disabled = true;
     submitLabel.textContent = 'Sending…';
     try {
-      // Netlify Forms: post the form url-encoded to the site; Netlify stores it and emails it on.
-      const res = await fetch('/', {
+      // Post to the Cloudflare Pages Function, which checks the message and emails it on.
+      const res = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString(),
+        headers: { Accept: 'application/json' },
+        body: data,
       });
       if (!res.ok) {
         const err = new Error(`HTTP ${res.status}`);
         err.status = res.status;
+        try {
+          const body = await res.json();
+          if (res.status === 422 && body.message) err.serverMessage = body.message;
+        } catch (e) {}
         throw err;
       }
       showResult(true, '201 Created', {

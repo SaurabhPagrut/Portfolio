@@ -2,7 +2,7 @@
 
 Personal site for **[saurabhpagrut.in](https://saurabhpagrut.in)**. The design idea is "Saurabh, as an API": each section is an endpoint, and the hero shows the profile as the JSON response it resolves to.
 
-Plain HTML, CSS and JavaScript with no framework and no dependencies, hosted on Netlify. A small Node script builds the page from one content file. Fonts and logos are served from the site itself, so the page makes no third-party requests.
+Plain HTML, CSS and JavaScript with no framework and no dependencies, hosted on Cloudflare Pages. A small Node script builds the page from one content file. Fonts and logos are served from the site itself, so the page makes no third-party requests.
 
 ```
 src/
@@ -22,9 +22,9 @@ public/
   404.html            not-found page
   thanks/index.html   shown after sending a message with JavaScript turned off
   robots.txt, sitemap.xml
-public/_redirects     www and *.netlify.app → saurabhpagrut.in
 public/_headers       security and cache headers
-netlify.toml          tells Netlify to run the build and publish public/
+functions/api/contact.js  Pages Function that receives the contact form and emails it via Resend
+wrangler.toml         tells Cloudflare Pages to publish public/
 ```
 
 ## Run it locally
@@ -36,11 +36,11 @@ npm run build        # writes public/index.html from src/content.js
 npx serve public     # or: python3 -m http.server -d public 3000
 ```
 
-The contact form only sends on Netlify; locally the request has nowhere to go.
+To run the contact form locally too, put the variables from the Contact form section in a `.dev.vars` file (git-ignored) and run `npm run dev`, which serves the site and the function with Wrangler.
 
 ## Editing content
 
-Edit `src/content.js`, run `npm run build`, and commit both `src/content.js` and the regenerated `public/index.html`. Netlify also runs the build on every deploy, so the live site always matches `content.js`.
+Edit `src/content.js`, run `npm run build`, and commit both `src/content.js` and the regenerated `public/index.html`. Cloudflare Pages also runs the build on every deploy, so the live site always matches `content.js`.
 
 The normal view and the **JSON** view of each section come from the same data, so you only change things once. Some examples:
 
@@ -52,19 +52,34 @@ Durations and the footer year are computed when the page is built, and `assets/a
 
 ## Contact form
 
-The form uses **Netlify Forms** (no server code and no secrets in the repo). Spam is filtered by Netlify plus a hidden honeypot field.
+The form posts to `/api/contact`, a Cloudflare Pages Function (`functions/api/contact.js`). It checks the fields, drops anything that fills in the hidden honeypot field, and sends the message by email through [Resend](https://resend.com) with `Reply-To` set to the sender. Without JavaScript the browser posts the form normally and lands on `/thanks/`.
 
-One-time setup in Netlify:
-1. **Forms → Enable form detection**, then redeploy once.
-2. **Site configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification → Email notification**, once for `getsaurabhpagrut@gmail.com` and once for `hello@saurabhpagrut.in`, form `contact`.
+One-time setup:
+1. In Resend, add and verify the domain `saurabhpagrut.in` (it gives you DNS records to add in Cloudflare), then create an API key.
+2. In Cloudflare, **Workers & Pages → saurabhpagrut → Settings → Variables and Secrets**, for Production:
+   - `RESEND_API_KEY` (type *Secret*): the Resend API key
+   - `CONTACT_TO`: `getsaurabhpagrut@gmail.com,hello@saurabhpagrut.in`
+   - `CONTACT_FROM`: `Portfolio <contact@saurabhpagrut.in>`
+3. Redeploy so the function picks them up.
+
+## Deploying
+
+In Cloudflare, **Workers & Pages → Create → Pages → Connect to Git**, pick this repo, and set:
+
+| Setting                | Value           |
+|------------------------|-----------------|
+| Production branch      | `main`          |
+| Framework preset       | None            |
+| Build command          | `node build.js` |
+| Build output directory | `public`        |
+
+Every push to `main` deploys; other branches get preview URLs. `npm run deploy` uploads from your machine instead.
 
 ## Domain
 
-saurabhpagrut.in is registered at Hostinger and points at Netlify:
+saurabhpagrut.in is registered at Hostinger. To serve it from Cloudflare:
 
-| Type  | Name | Value                                  |
-|-------|------|----------------------------------------|
-| A     | @    | 75.2.60.5                              |
-| CNAME | www  | saurabhpagrutportfolio.netlify.app   |
-
-In Netlify, `saurabhpagrut.in` is the primary domain and HTTPS is provisioned automatically.
+1. Add the site to Cloudflare (free plan) and change the nameservers at Hostinger to the two Cloudflare gives you. Check that the imported DNS records (especially MX records for `hello@saurabhpagrut.in`) came across.
+2. In the Pages project, **Custom domains → Set up a custom domain**: add `saurabhpagrut.in`, then `www.saurabhpagrut.in`. Cloudflare creates the DNS records and HTTPS certificates.
+3. Send `www` and the `*.pages.dev` address to the main domain with a redirect rule (Pages' `_redirects` file can't redirect by hostname): **Rules → Redirect Rules → Create**, when *Hostname equals `www.saurabhpagrut.in`*, dynamic redirect to `concat("https://saurabhpagrut.in", http.request.uri.path)`, status 301, preserve query string. For `saurabhpagrut.pages.dev`, use **Bulk Redirects** at the account level the same way.
+4. Once the Cloudflare site works, delete the old Netlify site.

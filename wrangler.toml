@@ -1,0 +1,7 @@
+# Cloudflare Pages settings for saurabhpagrut.in.
+# Build: `node build.js` turns src/content.js into public/index.html (plain Node, nothing to install),
+# then Pages publishes public/. functions/ holds the contact form's Pages Function (/api/contact).
+# Headers live in public/_headers. Secrets are set in the dashboard, never here.
+name = "saurabhpagrut"
+pages_build_output_dir = "public"
+compatibility_date = "2026-10-01"
