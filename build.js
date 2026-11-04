@@ -9,12 +9,14 @@ import { page } from './src/page.js';
 
 const file = (path) => new URL(`./public/${path}`, import.meta.url);
 
-const VERSIONED = ['styles.css', 'app.js'];
+const VERSIONED = ['styles.css', 'app.js', 'bracel/shared.js', 'bracel/engine.js', 'bracel/spots.js', 'bracel/cat.js'];
 const hashes = Object.fromEntries(
   VERSIONED.map((name) => [name, createHash('sha256').update(readFileSync(file(`assets/${name}`))).digest('hex').slice(0, 8)]),
 );
 const stamp = (html) =>
-  html.replace(/\/assets\/(styles\.css|app\.js)(\?v=[0-9a-f]*)?/g, (_, name) => `/assets/${name}?v=${hashes[name]}`);
+  html.replace(/\/assets\/([\w/.-]+\.(?:css|js))(\?v=[0-9a-f]*)?/g, (whole, name) =>
+    name in hashes ? `/assets/${name}?v=${hashes[name]}` : whole,
+  );
 
 // index.html is generated; the other pages are hand-written and only get their links re-stamped.
 const pages = [
@@ -34,5 +36,5 @@ if (process.argv.includes('--check')) {
   console.log('All pages are up to date.');
 } else {
   for (const [path, html] of pages) writeFileSync(file(path), html);
-  console.log(`Wrote ${pages.map(([path]) => path).join(', ')} (styles.css ${hashes['styles.css']}, app.js ${hashes['app.js']})`);
+  console.log(`Wrote ${pages.map(([path]) => path).join(', ')} (${Object.entries(hashes).map(([n, h]) => `${n} ${h}`).join(', ')})`);
 }
