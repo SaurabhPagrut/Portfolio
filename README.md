@@ -19,6 +19,7 @@ public/
   assets/portrait-*   profile photo (480 and 960 px)
   assets/icons/       skill logos from Devicon (MIT), served locally
   assets/fonts/       Geist and Geist Mono variable fonts (OFL), served locally
+  assets/bracel/      Bracel the cat: engine copied from BracelTheCat, started by cat.js
   404.html            not-found page
   thanks/index.html   shown after sending a message with JavaScript turned off
   robots.txt, sitemap.xml
@@ -51,6 +52,12 @@ The normal view and the **JSON** view of each section come from the same data, s
 After editing `public/assets/styles.css` or `public/assets/app.js`, run `npm run build` too. It stamps each page's links with a hash of the file (`app.js?v=94c53696`). Browsers cache `/assets/` for a week, and the new hash is what makes them fetch the edited file.
 
 Durations and the footer year are computed when the page is built, and `assets/app.js` keeps the ongoing durations current in the browser.
+
+## Bracel
+
+The cat walking on the page is [Bracel](https://bracel.saurabhpagrut.in). `public/assets/bracel/shared.js`, `engine.js` and `spots.js` are copied unchanged from `src/` in [BracelTheCat](https://github.com/SaurabhPagrut/BracelTheCat) (MIT, `LICENSE.txt`). `cat.js` starts it the way that project's `site/cat.js` does, with sound off. It makes no network requests and saves nothing.
+
+To update it, copy the three files again from BracelTheCat's `src/`, then run `npm run build`. The art is adapted from Bento Cat by mikewirsch under CC BY 4.0, so keep the credit in the page footer.
 
 ## Contact form
 

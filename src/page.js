@@ -481,6 +481,10 @@ export function page(today = new Date()) {
   <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <script src="/assets/app.js" defer></script>
+  <script src="/assets/bracel/shared.js" defer></script>
+  <script src="/assets/bracel/engine.js" defer></script>
+  <script src="/assets/bracel/spots.js" defer></script>
+  <script src="/assets/bracel/cat.js" defer></script>
   <script type="application/ld+json">${JSON.stringify(person)}</script>
 </head>
 <body>
@@ -502,6 +506,7 @@ ${contact()}
     <div class="container footer-inner">
       <p>© ${today.getFullYear()} ${fullName}</p>
       <p><code>200 OK</code> · Built by hand, no framework</p>
+      <p class="footer-credit">The cat is <a href="https://bracel.saurabhpagrut.in" target="_blank" rel="noopener">Bracel</a>, adapted from <a href="https://rive.app/marketplace/21131-39716-bento-cat/" target="_blank" rel="noopener">Bento Cat</a> by mikewirsch (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>)</p>
     </div>
   </footer>
 </body>

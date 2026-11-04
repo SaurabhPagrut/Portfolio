@@ -200,6 +200,26 @@ export const projects = {
   intro: 'Recent work. All four run in your own browser rather than on a server.',
   items: [
     {
+      name: 'Bracely',
+      year: 2026,
+      kind: 'Web app',
+      tag: 'WEB',
+      description:
+        'Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data, JWT and SSL certificate decoding. Nothing is uploaded. It installs as an app, and also ships as Chrome and Firefox extensions, a VS Code extension and an npm command-line tool.',
+      stack: ['JavaScript', 'CodeMirror', 'Web Workers', 'Python', 'jsdom'],
+      links: { code: 'https://github.com/SaurabhPagrut/Bracely', demo: 'https://bracely.saurabhpagrut.in' },
+    },
+    {
+      name: 'MyAdvoKit',
+      year: 2026,
+      kind: 'Web app',
+      tag: 'WEB',
+      description:
+        'Free toolkit of 44 tools for Indian litigation advocates, running entirely in the browser so case files never leave it. It started as an e-Filing bundle compiler (petitions, applications and exhibits into one court-ready PDF with a bilingual index, running page numbers and bookmarks) and now covers PDF work (merge, compress, sign, redact, OCR, Word to PDF and back), drafting (templates, mail merge, comparing drafts) and practice tools (matters, a cause list tracker, limitation, interest and court fee calculators, an IPC to BNS converter and GST fee invoices).',
+      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'pdf-lib', 'PDF.js'],
+      links: { code: 'https://github.com/SaurabhPagrut/MyAdvoKit', demo: 'https://myadvokit.saurabhpagrut.in' },
+    },
+    {
       name: 'PinScout',
       year: 2026,
       kind: 'Chrome extension',
@@ -226,26 +246,6 @@ export const projects = {
         demo: 'https://bracel.saurabhpagrut.in',
         store: 'https://chromewebstore.google.com/detail/bracel-a-cat-for-every-we/diiopbiepmlejbbibggfhhdmnaeiehjf',
       },
-    },
-    {
-      name: 'Bracely',
-      year: 2026,
-      kind: 'Web app',
-      tag: 'WEB',
-      description:
-        'Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data, JWT and SSL certificate decoding. Nothing is uploaded. It installs as an app, and also ships as Chrome and Firefox extensions, a VS Code extension and an npm command-line tool.',
-      stack: ['JavaScript', 'CodeMirror', 'Web Workers', 'Python', 'jsdom'],
-      links: { code: 'https://github.com/SaurabhPagrut/Bracely', demo: 'https://bracely.saurabhpagrut.in' },
-    },
-    {
-      name: 'MyAdvoKit',
-      year: 2026,
-      kind: 'Web app',
-      tag: 'WEB',
-      description:
-        'Free toolkit of 44 tools for Indian litigation advocates, running entirely in the browser so case files never leave it. It started as an e-Filing bundle compiler (petitions, applications and exhibits into one court-ready PDF with a bilingual index, running page numbers and bookmarks) and now covers PDF work (merge, compress, sign, redact, OCR, Word to PDF and back), drafting (templates, mail merge, comparing drafts) and practice tools (matters, a cause list tracker, limitation, interest and court fee calculators, an IPC to BNS converter and GST fee invoices).',
-      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'pdf-lib', 'PDF.js'],
-      links: { code: 'https://github.com/SaurabhPagrut/MyAdvoKit', demo: 'https://myadvokit.saurabhpagrut.in' },
     },
   ],
 };
