@@ -55,9 +55,9 @@ Durations and the footer year are computed when the page is built, and `assets/a
 
 ## Bracel
 
-The cat walking on the page is [Bracel](https://bracel.saurabhpagrut.in). `public/assets/bracel/shared.js`, `engine.js` and `spots.js` are copied unchanged from `src/` in [BracelTheCat](https://github.com/SaurabhPagrut/BracelTheCat) (MIT, `LICENSE.txt`). `cat.js` starts it the way that project's `site/cat.js` does, with sound off. It makes no network requests and saves nothing.
+The cat walking on the page is [Bracel](https://bracel.saurabhpagrut.in). `public/assets/bracel/shared.js`, `engine.js` and `spots.js` are copied unchanged from `src/` in [BracelTheCat](https://github.com/SaurabhPagrut/BracelTheCat) (MIT, `LICENSE.txt`). `new-actions.js` is copied from its `demo/`: the roadmap actions that aren't in the extension yet (chase its tail, loaf, box, laser dot, knock it off, zoomies, bird watching, roll over, follow me). `cat.js` starts the cat the way that project's `site/cat.js` does, with sound off, and lets Bracel pick the new actions on its own. It makes no network requests and saves nothing.
 
-To update it, copy the three files again from BracelTheCat's `src/`, then run `npm run build`. The art is adapted from Bento Cat by mikewirsch under CC BY 4.0, so keep the credit in the page footer.
+To update it, copy the three files again from BracelTheCat's `src/` and `new-actions.js` from its `demo/`, then run `npm run build`. The art is adapted from Bento Cat by mikewirsch under CC BY 4.0, so keep the credit in the page footer.
 
 ## Contact form
 

@@ -9,7 +9,7 @@ import { page } from './src/page.js';
 
 const file = (path) => new URL(`./public/${path}`, import.meta.url);
 
-const VERSIONED = ['styles.css', 'app.js', 'bracel/shared.js', 'bracel/engine.js', 'bracel/spots.js', 'bracel/cat.js'];
+const VERSIONED = ['styles.css', 'app.js', 'bracel/shared.js', 'bracel/engine.js', 'bracel/spots.js', 'bracel/new-actions.js', 'bracel/cat.js'];
 const hashes = Object.fromEntries(
   VERSIONED.map((name) => [name, createHash('sha256').update(readFileSync(file(`assets/${name}`))).digest('hex').slice(0, 8)]),
 );

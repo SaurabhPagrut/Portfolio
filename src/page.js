@@ -484,6 +484,7 @@ export function page(today = new Date()) {
   <script src="/assets/bracel/shared.js" defer></script>
   <script src="/assets/bracel/engine.js" defer></script>
   <script src="/assets/bracel/spots.js" defer></script>
+  <script src="/assets/bracel/new-actions.js" defer></script>
   <script src="/assets/bracel/cat.js" defer></script>
   <script type="application/ld+json">${JSON.stringify(person)}</script>
 </head>
