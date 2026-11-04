@@ -44,7 +44,7 @@ Edit `src/content.js`, run `npm run build`, and commit both `src/content.js` and
 
 The normal view and the **JSON** view of each section come from the same data, so you only change things once. Some examples:
 
-- **Add a project:** add an entry to `projects.items` with `name`, `year`, `kind`, `tag`, `description`, `stack` and `links`. The Projects section and its nav link appear once it has at least one entry.
+- **Add a project:** add an entry to `projects.items` with `name`, `year`, `kind`, `tag`, `description`, `stack` and `links` (`code` for GitHub, `demo` for the website, `store` for a Chrome Web Store listing). The Projects section and its nav link appear once it has at least one entry.
 - **New role:** add it to the top of `experience.roles` and set the previous role's `end`. Durations and the "Current" badge are worked out from the dates.
 - **New skill:** add it to a group in `skills`. Use `logo` for a file in `public/assets/icons/` or `glyph` for one of the icons in `src/icons.js`. Filter counts update by themselves.
 

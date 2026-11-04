@@ -291,6 +291,8 @@ function project(p) {
       `<a class="project-link" href="${esc(p.links.code)}" target="_blank" rel="noopener">${icon('github', 15)} Code</a>`,
     p.links.demo &&
       `<a class="project-link" href="${esc(p.links.demo)}" target="_blank" rel="noopener">${icon('external', 15)} ${esc(p.links.demoLabel ?? 'Live')}</a>`,
+    p.links.store &&
+      `<a class="project-link" href="${esc(p.links.store)}" target="_blank" rel="noopener">${icon('external', 15)} ${esc(p.links.storeLabel ?? 'Chrome Web Store')}</a>`,
   ].filter(Boolean);
   return `
               <article class="card project${p.featured ? ' project--featured' : ''}" data-card>
@@ -325,7 +327,7 @@ function projectSection(id, title, data) {
   if (!data.items.length) return '';
   const human = `
             <p class="section-intro">${esc(data.intro)}</p>
-            <div class="archive-grid">${list(data.items, project)}
+            <div class="archive-grid${data.items.length % 2 === 0 && !data.items.some((p) => p.featured) ? ' archive-grid--pairs' : ''}">${list(data.items, project)}
             </div>`;
   return endpoint({ id, title, human, json: { [id]: data.items.map(projectJson) } });
 }

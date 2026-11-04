@@ -192,11 +192,12 @@ export const skills = [
 ];
 
 // Project cards, used by both the Projects and Archive sections.
-// tag: the small label on the card ("WEB", "API"). links.demoLabel defaults to "Live".
+// tag: the small label on the card ("WEB", "API"). links: code (GitHub), demo (the website or a video;
+// demoLabel defaults to "Live") and store (a Chrome Web Store listing; storeLabel defaults to "Chrome Web Store").
 // modules + mine: optional list of modules, with the ones you built marked.
 
 export const projects = {
-  intro: 'Recent work. All three run in your own browser rather than on a server.',
+  intro: 'Recent work. All four run in your own browser rather than on a server.',
   items: [
     {
       name: 'PinScout',
@@ -204,12 +205,26 @@ export const projects = {
       kind: 'Chrome extension',
       tag: 'EXT',
       description:
-        'Chrome extension that finds where an out-of-stock product can be delivered. It checks your pincode first, then nearby pincodes, the rest of your state and the rest of India, and stops at the first place the product is available, using India Post data for about 19,500 pincodes. Works with Flipkart and Croma, with experimental support for Amazon, Myntra and Blinkit.',
+        'Chrome extension that finds where an out-of-stock product can be delivered. It checks your pincode first, then nearby pincodes, the rest of your state and the rest of India, and stops at the first place the product is available, using India Post data for about 19,500 pincodes. Works with Flipkart and Croma, with experimental support for Amazon, Myntra, Blinkit and Reliance Digital. Free, with no account, no server and no tracking.',
       stack: ['JavaScript', 'Chrome Extensions (MV3)', 'Python'],
       links: {
         code: 'https://github.com/SaurabhPagrut/PinScout',
-        demo: 'https://chromewebstore.google.com/detail/pinscout-pincode-delivery/oicfbaoamapgdhailjaaokgkdolalbco',
-        demoLabel: 'Chrome Web Store',
+        demo: 'https://pinscout.saurabhpagrut.in',
+        store: 'https://chromewebstore.google.com/detail/pinscout-pincode-delivery/oicfbaoamapgdhailjaaokgkdolalbco',
+      },
+    },
+    {
+      name: 'Bracel',
+      year: 2026,
+      kind: 'Browser extension',
+      tag: 'EXT',
+      description:
+        'Browser extension that puts Bracel, a small round cat, on the websites you visit. It lives on the edges of the page (the tops of boxes and images, under headers, along the bottom of the window), where it walks, jumps, hangs, grooms, naps and purrs, and never takes clicks, focus or keys. Drawn and animated in code, with 22 activities and five coats. It makes no network requests and has no analytics, and builds for Chrome, Edge, Opera, Firefox and Safari.',
+      stack: ['JavaScript', 'Chrome Extensions (MV3)', 'Canvas', 'Playwright'],
+      links: {
+        code: 'https://github.com/SaurabhPagrut/BracelTheCat',
+        demo: 'https://bracel.saurabhpagrut.in',
+        store: 'https://chromewebstore.google.com/detail/bracel-a-cat-for-every-we/diiopbiepmlejbbibggfhhdmnaeiehjf',
       },
     },
     {
@@ -218,19 +233,19 @@ export const projects = {
       kind: 'Web app',
       tag: 'WEB',
       description:
-        'Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data and JWT decoding. Nothing is uploaded, and it also ships as Chrome and Firefox extensions.',
+        'Every JSON tool in one place, running entirely in the browser: format and repair, tree, table and graph views, diff and JSON Patch, jq, JMESPath, JSONPath and SQL queries, schema generation and validation, conversion to and from YAML, CSV, Excel, XML and TOML, typed models in 16 languages, mock data, JWT and SSL certificate decoding. Nothing is uploaded. It installs as an app, and also ships as Chrome and Firefox extensions, a VS Code extension and an npm command-line tool.',
       stack: ['JavaScript', 'CodeMirror', 'Web Workers', 'Python', 'jsdom'],
       links: { code: 'https://github.com/SaurabhPagrut/Bracely', demo: 'https://bracely.saurabhpagrut.in' },
     },
     {
-      name: 'AbogadaFlow',
+      name: 'MyAdvoKit',
       year: 2026,
       kind: 'Web app',
       tag: 'WEB',
       description:
-        'Privacy-first eFiling tool for Indian litigation advocates. It compiles petitions, applications, lists of documents and exhibits into one court-ready PDF bundle in the browser, with an auto-generated index in English and Devanagari, running page numbers, PDF bookmarks, court presets and an eFiling 3.0 filename check. Case files never leave the browser.',
-      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'pdf-lib'],
-      links: { code: 'https://github.com/SaurabhPagrut/AbogadaFlow', demo: 'https://abogadaflow.saurabhpagrut.in' },
+        'Free toolkit of 44 tools for Indian litigation advocates, running entirely in the browser so case files never leave it. It started as an e-Filing bundle compiler (petitions, applications and exhibits into one court-ready PDF with a bilingual index, running page numbers and bookmarks) and now covers PDF work (merge, compress, sign, redact, OCR, Word to PDF and back), drafting (templates, mail merge, comparing drafts) and practice tools (matters, a cause list tracker, limitation, interest and court fee calculators, an IPC to BNS converter and GST fee invoices).',
+      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'pdf-lib', 'PDF.js'],
+      links: { code: 'https://github.com/SaurabhPagrut/MyAdvoKit', demo: 'https://myadvokit.saurabhpagrut.in' },
     },
   ],
 };
